@@ -1,0 +1,14 @@
+To install lodash for array functionalities
+    npm install lodash
+
+To install nodemon to auto re-run the project when changes are made
+    npm install nodemon
+    npm install nodemon --save-dev       This line is to make sure it is for development purpose ONLY
+
+
+To update any package
+    npm update package_name
+
+
+To uninstall any package
+    npm uninstall package_name
