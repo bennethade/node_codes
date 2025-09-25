@@ -95,14 +95,157 @@ const lodash = require('lodash')
 // })
 
 
-const writeableStream = fs.createWriteStream('output2.txt')
+// const writeableStream = fs.createWriteStream('output2.txt')
 
-writeableStream.write('Hello, ')
-writeableStream.write('world! ')
-writeableStream.write('This is just a test message to determine if the writeable streams worked')
-writeableStream.end()
+// writeableStream.write('Hello, ')
+// writeableStream.write('world! ')
+// writeableStream.write('This is just a test message to determine if the writeable streams worked')
+// writeableStream.end()
 
 
-writeableStream.on('finish', ()=>{
-    console.log('Finish writing to the file.')
-})
+// writeableStream.on('finish', ()=>{
+//     console.log('Finish writing to the file.')
+// })
+
+
+// const readableStream = fs.createReadStream('example.txt')
+
+// const writeableStream = fs.createWriteStream('example-output.txt')
+
+// readableStream.pipe(writeableStream)
+
+// writeableStream.on('finish', ()=>{
+//     console.log('File Copied Successfully');
+// })
+
+
+// const readline = require('readline')
+
+// const readableStream = fs.createReadStream('example.txt')
+
+// const rl = readline.createInterface({input: readableStream})
+
+// rl.on('line', (line) => {
+//     console.log('Line:', line);
+// })
+
+// rl.on('close', () => {
+//     console.log('Finished processing the file');
+    
+// })
+
+
+
+
+//MAKE A DIRECTORY
+// fs.mkdir('newDirectory', (err) => {
+//     if(err){
+//         return console.error('Error creating directory:', err)
+//     }
+
+//     console.log('Directory created successfully!')
+// })
+
+
+// fs.mkdirSync('newDirectory2')
+// console.log('Directory created successfully!');
+
+
+
+
+
+//READ A DIRECTORY
+// fs.readdir('./', (err, files) => {
+//     if(err){
+//         return console.error('Error reading directory:', err)
+//     }
+
+//     console.log('Directory content:', files);
+// })
+
+
+// const files =fs.readdirSync('./')
+// console.log('Directory content:', files);
+
+
+
+
+
+//CHECK IF A DIRECTORY EXISTS
+// const dirName = 'newDirectory3'
+
+// if (fs.existsSync(dirName)){
+//     console.log('Directory exists');
+    
+// }else{
+//     console.log('Directory does not exist');
+    
+// }
+
+
+
+//DELETING A DIRECTORY
+// fs.rmdir('newDirectory2', (err) => {
+//     if(err){
+//         return console.error('Error removing directory:', err)
+//     }
+
+//     console.log('Directory removed successfully!');
+    
+// })
+
+
+
+//TO DELETE A DIRECTORY THAT HAS SUB-FOLDERS OR FILES IN IT
+// fs.rm('newDirectory',{recursive: true}, (err) => {
+//     if(err){
+//         return console.error('Error removing directory:', err)
+//     }
+
+//     console.log('Directory removed successfully!');
+    
+// })
+
+
+//TO RENAME A DIRECTORY
+// fs.rename('folder1', 'folder2', (err) => {
+//     if(err){
+//         return console.error('Error renaming directory: ', err);
+        
+//     }
+//     console.log('Directory renamed successfully!');
+    
+// })
+
+
+
+//GETTING DIRECTORY STATISTICS
+// fs.stat('example.txt', (err,stats) => {
+//     if(err){
+//         return console.error(err);
+        
+//     }
+//     console.log('Directory Stats: ', stats);
+//     console.log('Is directory: ', stats.isDirectory());
+//     console.log('Is File: ', stats.isFile());
+    
+// })
+
+
+
+//WATCHING A DIRECTORY
+// fs.watch('./', (eventType, fileName) => {
+//     console.log(`Event: ${eventType}`);
+//     if (fileName) {
+//         console.log(`Filename: ${fileName}`);
+        
+//     }
+    
+// })
+
+
+
+
+
+
+//HANDLING HTTP REQUESTS AND RESPONSE
