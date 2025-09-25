@@ -248,4 +248,46 @@ const lodash = require('lodash')
 
 
 
-//HANDLING HTTP REQUESTS AND RESPONSE
+//HANDLING HTTP REQUESTS AND RESPONSE > go to the server.js file
+
+
+
+
+
+
+///Handling event emitters
+
+const EventEmitter = require('events')
+
+const emitter = new EventEmitter()
+
+
+//Registering an event listener
+emitter.on('test1', () => {
+    console.log('An event has occured in test 1');
+})
+
+
+//Handling event errors
+emitter.on('error', (err) => {
+    console.error('Error event: ', err.message);
+    
+})
+
+
+try {
+    emitter.emit('test1') //To call the function 
+    emitter.removeListener('test1') //To remove the event listener
+    emitter.emit('test1') //Recalling the listener after removing it to confirm if it was truly removed
+
+} catch (error) {
+    emitter.emit('error', error)
+}
+
+
+
+
+
+// emitter.emit('test1') //To call the function 
+// emitter.removeListener('test1') //To remove the event listener
+// emitter.emit('test1') //Recalling the listener after removing it to confirm if it was truly removed
